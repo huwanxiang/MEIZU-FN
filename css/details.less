@@ -1,0 +1,56 @@
+// 抹去浏览器默认样式
+@import "style.less";
+
+// 引入公用的样式文件
+@import "public.less";
+
+// 自定义头部样式
+#header {
+    position: relative;
+    background-color: white;
+
+    .header_nav {
+        #nav {
+            .menu {
+                ul {
+                    li {
+                        a {
+                            color: #333333;
+                        }
+                    }
+                }
+            }
+            .operation {
+                .personage {
+                    .show_box {
+                        top: 45px;
+
+                        ul {
+                            border: 1px solid #333333;
+                        }
+
+                        .triangle {
+                            top: -8px;
+                            border-top: 1px solid #333333;
+                            border-left: 1px solid #333333;
+                        }
+                    }
+
+                    i {
+                        color: #333333;
+                    }
+                }
+
+                .shop_car {
+                    i {
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    margin-top: 0;
+}

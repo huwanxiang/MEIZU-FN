@@ -1,0 +1,227 @@
+// 抹去浏览器默认样式
+@import "style.less";
+
+// 引入公用的样式文件
+@import "public.less";
+
+
+// 自定义头部样式
+#header{
+    position: relative;
+    background-color: white;
+    .header_nav{
+        #nav{
+            .menu{
+                ul{
+                    li{
+                        a{
+                            color: #333333;
+                        }
+                    }
+                }
+            }
+            .operation{
+                .personage{
+                    .show_box{
+                        top: 45px;
+                        ul{
+                            border: 1px solid #333333;
+                        }
+                        .triangle{
+                            top: -8px;
+                            border-top: 1px solid #333333;
+                            border-left: 1px solid #333333;
+                        }
+                    }
+                    i{
+                        color: #333333;
+                    }
+                }
+                .shop_car{
+                    i{
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+}
+// 网站大图
+.banner{
+    width: 100%;
+    height: 450px;
+    background:url(../images/listbanner.jpg) no-repeat center center;
+    background-size: cover;
+    a{
+        display: block;
+        height: 100%;
+    }
+}
+// 商品列表
+.commodity_list{
+    // 标题
+    .title{
+        margin: 88px 0 26px; 
+        display: flex;
+        justify-content: space-between;
+        h1{
+            color: #515151;
+            font-size: 30px;
+        }
+        .filtrate{
+            display: flex;
+            .active{
+                transition: all .2s;
+                color: #00c3f5;
+            }
+            a , span{
+                position: relative;
+                font-size: 18px;
+                font-weight: 300;
+                color: #343434;
+                line-height: 20px;
+                margin-left: 15px;
+            }
+            span{
+                cursor: pointer;
+                display: flex;
+                section{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    height: 18px;
+                    margin-left: 7px;
+                    i{
+                        height: 11px;
+                    }
+                }
+            }
+        }
+    }
+    // 列表
+    .list{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li{
+                position: relative;
+                width: 403px;
+                height: 556px;
+                margin: 0 0 15px 0;
+                background: #fff;
+                box-sizing: border-box;
+                a{
+                    display: block;
+                    padding-top: 40px;
+                    padding-bottom: 28px;
+                    max-height: 556px;
+                    text-align: center;
+                    img{
+                        display: block;
+                        width: 320px;
+                        height: 320px;
+                        margin: auto;
+                    }
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        li{
+                            width: 36px;
+                            height: 36px;
+                            margin: 0 5px;
+                            .circle{
+                                width: 26px;
+                                margin-top: 4px;
+                                height: 26px;
+                            }
+                        }
+                        .initial{
+                            border: 1px solid #333333;
+                            border-radius: 50%;
+                        }
+                    }
+                    h3{
+                        font-size: 24px;
+                        color: black;
+                    }
+                    .synopsis{
+                        font-size: 16px;
+                        color: #747474;
+                        margin: 16px 0 26px;
+                    }
+                    p{
+                        span,em{
+                            color: #c00;
+                            font-size: 14px;
+                        }
+                        .this_price{
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 为你推荐
+.recommend{
+    margin-top: 96px;
+    h1{
+        margin-bottom: 32px;
+        color: #515151;
+        font-size: 30px;
+    }
+    .swiper-pagination-bullet{
+        border: 2px solid #a1a1a1;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #a1a1a1;
+    }
+    .swiper-container{
+        position: relative;
+        padding-bottom: 80px;
+        .swiper-pagination{
+            position: absolute;
+            bottom: 29px;
+        }
+        .swiper-slide{
+            cursor: pointer;
+            width: 320px;
+            height: 429px;
+            padding: 40px 0;
+            box-sizing: border-box;
+            background-color: white;
+            img{
+                width: 230px;
+                height: 230px;
+                display: block;
+                margin: auto;
+            }
+            img:hover{
+                transition: all 0.5s;
+                transform: scale(1.1);
+            }
+            .introduce{
+                margin-top: 36px;
+                text-align: center;
+                h3{
+                    font-size: 21px;
+                    color: #2b2b2b;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                p{
+                    color: #c00;
+                    font-size: 27px;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    margin-top: 0;
+}

@@ -1,0 +1,377 @@
+// 抹去浏览器默认样式
+@import "style.less";
+
+// 引入公用的样式文件
+@import "public.less";
+
+// 网站banner
+#banner {
+    .swiper-slide {
+        width: 100%;
+        height: 670px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+}
+
+// 优势
+.advantage {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 41px;
+    .type_area {
+        display: flex;
+        a {
+            width: 25%;
+            height: 277px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img {
+                display: block;
+                width: 50%;
+            } // 标题
+            h5 {
+                margin: 14px 0 10px 0;
+                font-size: 14px;
+                color: #33334d;
+            } // 简介
+            p {
+                color: #999999;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+// 手机列表
+.phone_list {
+    // 标题
+    h3 {
+        text-align: center;
+        color: #515151;
+        font-size: 30px;
+        line-height: 65px;
+    } // 图片展示
+    .phone {
+        width: 100%;
+        height: 450px;
+        background: url(../images/phone.jpg) no-repeat center;
+        a {
+            display: block;
+            height: 100%;
+        } // hover遮罩
+        a:hover {
+            transition: all 1s;
+            background-color: #ffffff29;
+        }
+    } // 限时
+    .limit_time {
+        margin: 11px 0;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 615px; // height: 610px;
+                background-color: white;
+                box-sizing: border-box;
+                a {
+                    position: relative; // 限时卷
+                    em {
+                        displWay: block;
+                        width: 64px;
+                        height: 64px;
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        background-color: #ffac1f;
+                        border-radius: 50%;
+                        line-height: 64px;
+                        text-align: center;
+                        color: white;
+                    } // 标题
+                    h4 {
+                        padding-top: 64px;
+                        font-size: 26px;
+                        color: #333d46;
+                        text-align: center;
+                    } // 简介
+                    p {
+                        padding: 12px 0 16px;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #333333;
+                    } // 价格
+                    .price {
+                        padding: 0;
+                        text-align: center;
+                        color: #cc0000;
+                        font-size: 22px;
+                    } // 展示图片
+                    img {
+                        display: block;
+                        margin: auto;
+                        width: 460px;
+                    }
+                }
+            } // hover阴影效果
+            li:hover {
+                transition: all 1s;
+                box-shadow: 1px 0px 21px 8px #00000014;
+            }
+        }
+    } // 优惠
+    .discounts {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            li {
+                position: relative;
+                background-color: white;
+                width: 303px;
+                height: 375px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                a {
+                    display: block; // 优惠类型
+                    em {
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        top: 30px;
+                        left: 30px;
+                        background-color: #3f93f7;
+                        color: white;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 60px;
+                        font-size: 14px;
+                    } // 展示图片
+                    img {
+                        display: block;
+                        width: 230px;
+                        height: 230px;
+                        margin: auto;
+                        padding-top: 40px;
+                    } // 标题
+                    h4 {
+                        padding-top: 12px;
+                        font-size: 16px;
+                        color: #333d46;
+                        text-align: center;
+                    } // 简介
+                    p {
+                        padding: 7px 0;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #999999;
+                    } // 价格
+                    .price {
+                        padding: 0;
+                        text-align: center;
+                        color: #cc0000;
+                        font-size: 16px;
+                    }
+                }
+            } // hover阴影效果
+            li:hover {
+                transition: all 1s;
+                box-shadow: 1px 0px 21px 8px #00000014;
+            }
+        }
+    }
+}
+
+// 魅族声学
+.acoustics {
+    margin-top: 48px; // 标题
+    h3 {
+        text-align: center;
+        color: #515151;
+        font-size: 30px;
+        line-height: 65px;
+    } // 图片展示
+    .phone {
+        width: 100%;
+        height: 450px;
+        background: url(../images/sx.jpg) no-repeat center;
+        a {
+            display: block;
+            height: 100%;
+        } // hover遮罩
+        a:hover {
+            transition: all 1s;
+            background-color: #ffffff29;
+        }
+    }
+    .show_commodity {
+        margin-top: 11px; // 商品列表
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; // 第一个
+            li:first-child {
+                // 展示图片
+                background: url(../images/img.jpg) no-repeat center;
+                background-size: cover; // 文字介绍
+                .synopsis {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 30px; // 标题
+                    .title {
+                        font-size: 21px;
+                        font-weight: 700;
+                    }
+                    p {
+                        text-align: center;
+                        margin-bottom: 8px;
+                    } // 价格
+                    .price {
+                        margin-top: 4px; // 现价
+                        .new_price {
+                            color: #ebbd6b;
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin-right: 5px;
+                        } // 之前的价格
+                        .old_price {
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+            li {
+                width: 303px;
+                height: 375px;
+                position: relative;
+                background-color: white;
+                border-radius: 5px;
+                a {
+                    img {
+                        width: 230px;
+                        height: 230px;
+                        display: block;
+                        margin: 30px auto;
+                    } // 文字介绍
+                    .synopsis {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 10px;
+                        color: white; // 标题
+                        .title {
+                            color: #333333;
+                            font-size: 21px;
+                            font-weight: 700;
+                        }
+                        p {
+                            text-align: center;
+                            margin-bottom: 8px;
+                            color: #999999;
+                        } // 价格
+                        .price {
+                            margin-top: 4px; // 现价
+                            .new_price {
+                                color: #cc0000;
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin-right: 5px;
+                            } // 之前的价格
+                            .old_price {
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//社区热帖
+.community {
+    margin-top: 48px; // 标题
+    h3 {
+        text-align: center;
+        color: #515151;
+        font-size: 30px;
+        line-height: 65px;
+    } // 帖子列表
+    .hot_post {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        li {
+            position: relative;
+            width: 303px;
+            height: 388px;
+            background-color: white;
+            margin-bottom: 10px;
+            a {
+                display: block;
+                img {
+                    display: block;
+                    max-width: 100%;
+                } //头像及用户名
+                .head_portrait {
+                    margin: 10px 0;
+                    padding: 0 15px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 38px;
+                        height: 38px;
+                        border-radius: 50%;
+                    }
+                    span {
+                        color: #515151;
+                        margin-left: 16px;
+                    }
+                } // 简介
+                .synopsis_text {
+                    padding: 0 15px;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 27px;
+                    text-align: left;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    overflow: hidden;
+                    color: #515151;
+                } // 类别
+                .sort {
+                    color: #999;
+                    display: block;
+                    padding: 0 15px;
+                    margin-top: 10px;
+                    text-align: left;
+                    font-size: 14px;
+                }
+                .text {
+                    text-align: center;
+                    line-height: 53px;
+                    font-size: 16px;
+                    color: #515151;
+                }
+                .fa{
+                    position: absolute;
+                    right: 8px;
+                    top: 150px;
+                    color: white;
+                    font-size: 30px;
+                }
+            }
+        }
+        .flyme_List {
+            height: 245px;
+        }
+        .max_width{
+            width: 616px;
+        }
+    }
+}
+

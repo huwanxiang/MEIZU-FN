@@ -1,0 +1,498 @@
+@charset "utf-8";
+html {
+  color: #000;
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  font-family: sans-serif;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,
+q:after {
+  content: '';
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+a:hover {
+  text-decoration: none;
+}
+ins,
+a {
+  text-decoration: none;
+}
+html {
+  background-color: #f4f4f4;
+}
+.type_area {
+  width: 1242px;
+  margin: auto;
+}
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+#header .header_nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .header_nav #logo img {
+  width: 125px;
+}
+#header .header_nav #nav {
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+#header .header_nav #nav .menu {
+  display: flex;
+  align-items: center;
+}
+#header .header_nav #nav .menu ul {
+  display: flex;
+}
+#header .header_nav #nav .menu ul li a {
+  padding: 0 20px;
+  font-size: 14px;
+  color: white;
+}
+#header .header_nav #nav .menu ul li a:hover {
+  color: #1296db;
+}
+#header .header_nav #nav .menu .show_box {
+  background-color: white;
+}
+#header .header_nav #nav .operation {
+  display: flex;
+}
+#header .header_nav #nav .operation .search {
+  width: 170px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  height: 31px;
+  border: 1px solid #ccc;
+}
+#header .header_nav #nav .operation .search input {
+  display: block;
+  width: 80%;
+  height: 31px;
+  border-radius: 50px;
+  border: none;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+#header .header_nav #nav .operation .search input::-webkit-input-placeholder {
+  color: #6a6a6a;
+  font-size: 12px;
+}
+#header .header_nav #nav .operation .search .fa {
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6a6a6a;
+}
+#header .header_nav #nav .operation .personage {
+  margin: 0 14px 0 18px;
+  position: relative;
+}
+#header .header_nav #nav .operation .personage i {
+  color: white;
+  font-size: 24px;
+  line-height: 31px;
+  cursor: pointer;
+}
+#header .header_nav #nav .operation .personage .show_box {
+  display: none;
+  width: 98px;
+  background-color: white;
+  position: absolute;
+  left: -39px;
+  top: 39px;
+}
+#header .header_nav #nav .operation .personage .show_box .triangle {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -6px;
+  background-color: white;
+  left: 41px;
+  transform: rotate(45deg);
+}
+#header .header_nav #nav .operation .personage .show_box ul {
+  padding: 15px 0;
+  z-index: 1;
+}
+#header .header_nav #nav .operation .personage .show_box ul li {
+  margin: 10px auto;
+  text-align: center;
+}
+#header .header_nav #nav .operation .personage .show_box ul li a {
+  font-size: 14px;
+  color: #515151;
+  display: block;
+}
+#header .header_nav #nav .operation .personage:hover .show_box {
+  display: block;
+}
+#header .header_nav #nav .operation .shop_car {
+  color: white;
+  font-size: 24px;
+  line-height: 31px;
+  cursor: pointer;
+  position: relative;
+}
+#header .header_nav #nav .operation .shop_car em {
+  font-size: 12px;
+  background-color: #cc0000;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 15px;
+  position: absolute;
+  top: 0;
+  right: -9px;
+}
+#header .header_hover {
+  height: 198px;
+  opacity: 0;
+}
+#header .header_hover .type_area {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+#header .header_hover .type_area a {
+  width: 142px;
+  display: block;
+}
+#header .header_hover .type_area a img {
+  display: block;
+  width: 120px;
+  margin: auto;
+}
+#header .header_hover .type_area a p {
+  text-align: center;
+  color: #353535;
+  font-size: 14px;
+}
+#banner .swiper-slide {
+  width: 100%;
+  height: 670px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.advantage {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 41px;
+}
+.advantage .type_area {
+  display: flex;
+}
+.advantage .type_area a {
+  width: 25%;
+  height: 277px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advantage .type_area a img {
+  display: block;
+  width: 50%;
+}
+.advantage .type_area a h5 {
+  margin: 14px 0 10px 0;
+  font-size: 14px;
+  color: #33334d;
+}
+.advantage .type_area a p {
+  color: #999999;
+  font-size: 12px;
+}
+.phone_list h3 {
+  text-align: center;
+  color: #515151;
+  font-size: 30px;
+  line-height: 65px;
+}
+.phone_list .phone {
+  width: 100%;
+  height: 450px;
+  background: url(../images/phone.jpg) no-repeat center;
+}
+.phone_list .phone a {
+  display: block;
+  height: 100%;
+}
+.phone_list .phone a:hover {
+  transition: all 1s;
+  background-color: #ffffff29;
+}
+.phone_list .limit_time {
+  margin: 11px 0;
+}
+.phone_list .limit_time ul {
+  display: flex;
+  justify-content: space-around;
+}
+.phone_list .limit_time ul li {
+  width: 615px;
+  background-color: white;
+  box-sizing: border-box;
+}
+.phone_list .limit_time ul li a {
+  position: relative;
+}
+.phone_list .limit_time ul li a em {
+  displWay: block;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: #ffac1f;
+  border-radius: 50%;
+  line-height: 64px;
+  text-align: center;
+  color: white;
+}
+.phone_list .limit_time ul li a h4 {
+  padding-top: 64px;
+  font-size: 26px;
+  color: #333d46;
+  text-align: center;
+}
+.phone_list .limit_time ul li a p {
+  padding: 12px 0 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #333333;
+}
+.phone_list .limit_time ul li a .price {
+  padding: 0;
+  text-align: center;
+  color: #cc0000;
+  font-size: 22px;
+}
+.phone_list .limit_time ul li a img {
+  display: block;
+  margin: auto;
+  width: 460px;
+}
+.phone_list .limit_time ul li:hover {
+  transition: all 1s;
+  box-shadow: 1px 0px 21px 8px #00000014;
+}
+.phone_list .discounts ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.phone_list .discounts ul li {
+  position: relative;
+  background-color: white;
+  width: 303px;
+  height: 375px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.phone_list .discounts ul li a {
+  display: block;
+}
+.phone_list .discounts ul li a em {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: #3f93f7;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+}
+.phone_list .discounts ul li a img {
+  display: block;
+  width: 230px;
+  height: 230px;
+  margin: auto;
+  padding-top: 40px;
+}
+.phone_list .discounts ul li a h4 {
+  padding-top: 12px;
+  font-size: 16px;
+  color: #333d46;
+  text-align: center;
+}
+.phone_list .discounts ul li a p {
+  padding: 7px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+}
+.phone_list .discounts ul li a .price {
+  padding: 0;
+  text-align: center;
+  color: #cc0000;
+  font-size: 16px;
+}
+.phone_list .discounts ul li:hover {
+  transition: all 1s;
+  box-shadow: 1px 0px 21px 8px #00000014;
+}
+.acoustics {
+  margin-top: 48px;
+}
+.acoustics h3 {
+  text-align: center;
+  color: #515151;
+  font-size: 30px;
+  line-height: 65px;
+}
+.acoustics .phone {
+  width: 100%;
+  height: 450px;
+  background: url(../images/sx.jpg) no-repeat center;
+}
+.acoustics .phone a {
+  display: block;
+  height: 100%;
+}
+.acoustics .phone a:hover {
+  transition: all 1s;
+  background-color: #ffffff29;
+}
+.acoustics .show_commodity {
+  margin-top: 11px;
+}
+.acoustics .show_commodity ul .first img {
+  display: block;
+  max-width: 100%;
+}
+.acoustics .show_commodity ul li {
+  width: 303px;
+  height: 375px;
+  position: relative;
+}

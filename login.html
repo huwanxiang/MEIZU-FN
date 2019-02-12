@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入小图标 -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>登录 - 魅族</title>
+    <!-- 字体图标 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/less" href="css/login.less">
+    <script src="./js/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <section class="type_area header_nav">
+            <section id="logo">
+                <img src="./images/logo2.png" alt="" class="logo_img">
+            </section>
+        </section>
+    </header>
+    <!-- 登录 -->
+    <section class="login">
+        <section class="type_area">
+            <section class="login_box">
+                <!-- 登录方式 -->
+                <section class="login_mode">
+                    <a href="javascript:;" class="black">账号登录</a>
+                    <span class="string"></span>
+                    <a href="javascript:;" class="">二维码登录</a>
+                </section>
+                <!-- 账号登录 -->
+                <form method="get" action="" autocomplete="off" onsubmit="return false" id="data_form">
+                    <input type="text" class="tel" name="tel" placeholder="请输入手机号">
+                    <p class=""> </p>
+                    <input type="password" name="password" class="password" placeholder="请输入密码">
+                    <p class=""> </p>
+                    <label class="checkbox inline">
+                        <input type="checkbox" value="1">
+                        记住登录状态
+                    </label>
+                    <input type="submit" id="btn" value="登录">
+                </form>
+                <!-- 二维码 -->
+                <section class="qrcode">
+                    <img src="./images/QrShow.jpg" alt="">
+                    <p>请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- 底部 -->
+    <footer id="footer"></footer>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/ajax0.0.1.js"></script>
+    <script>
+        // 引入公共底部
+        $("#footer").load("footer.html");
+        $(".login_mode a").click(function () {
+            $(this).siblings('a').removeClass('black');
+            $(this).addClass('black');
+            var $text = $(this).text();
+            if ($text == '二维码登录') {
+                $(".qrcode").show();
+                $("form").hide();
+            } else {
+                $(".qrcode").hide();
+                $("form").show();
+            }
+        });
+        var $form = document.querySelector('#data_form');
+        var $btn = document.querySelector('#btn');
+        var $pAll = document.querySelectorAll('p');
+        var $tel = $form['tel'];
+        var $password = $form['password'];
+        $tel.onblur = function(){
+            var $p = this.nextElementSibling
+            if (this.value == '') {
+                $p.innerHTML = '账号不能为空';
+                $p.className = 'bg-danger';
+                return;
+            }
+            var reg = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/
+            if (reg.test(this.value)) {
+                $p.innerHTML = '验证成功';
+                $p.className = 'bg-success';
+
+            } else {
+                $p.innerHTML = '格式错误,只能是0-11位手机号码';
+                $p.className = 'bg-danger';
+            }
+        };
+        $password.onblur = function(){
+            var $p = this.nextElementSibling
+            if (this.value == '') {
+                $p.innerHTML = '密码不能为空';
+                $p.className = 'bg-danger';
+                return;
+            }
+            var reg = /^.{3,20}$/
+            if (reg.test(this.value)) {
+                $p.innerHTML = '验证成功';
+                $p.className = 'bg-success';
+
+            } else {
+                $p.innerHTML = '格式错误,密码应为长度为3-20的所有字符';
+                $p.className = 'bg-danger';
+            }
+        };
+        $btn.onclick = function () {
+            for (let i = 0; i < $pAll.length; i++) {
+                if ($pAll[i].className != 'bg-success') {
+                    $pAll[i].previousElementSibling.focus();
+                    return;
+                }
+            }
+            alert('全部验证成功')
+        }
+    </script>
+</body>
+
+</html>

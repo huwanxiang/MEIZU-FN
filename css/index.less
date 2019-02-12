@@ -9,9 +9,28 @@
     .swiper-slide {
         width: 100%;
         height: 670px;
-        background-size: cover;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         background-position-x: center;
+    }
+    .swiper-pagination-bullet{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        margin: 5px 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+    }
+    .swiper-pagination-active{
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border: 1px solid white;
+        margin: 4px 8px;
+        border-radius: 50%;
+        cursor: pointer;
     }
 }
 
@@ -31,7 +50,8 @@
             align-items: center;
             img {
                 display: block;
-                width: 50%;
+                //width: 50%;
+                height: 130px;
             } // 标题
             h5 {
                 margin: 14px 0 10px 0;

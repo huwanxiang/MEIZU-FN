@@ -2,6 +2,8 @@
 #header {
   // 悬浮
   position: absolute;
+  height: 80px;
+  overflow: hidden;
   width: 100%;
   z-index: 9;
   .header_nav {
@@ -35,17 +37,13 @@
               font-size: 14px;
               color: white;
             }
-            a:hover {
-              color: #1296db;
-            }
+
           }
         }
-        ul:hover a{
-          color: black;
-        }
+
         // hover显示快
         .show_box {
-          background-color: white; // height: ;
+          background-color: white;
         }
       }
       // 用户操作
@@ -158,9 +156,8 @@
   }
   // hover显示的区域
   .header_hover {
-    height: 198px; // display: none;
-    opacity: 0; // background-color: white;
-    //display: none;
+    height: 198px;
+    display: none;
     .type_area {
       display: flex;
       justify-content: space-between;

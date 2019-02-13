@@ -2,8 +2,6 @@
 #header {
   // 悬浮
   position: absolute;
-  height: 80px;
-  overflow: hidden;
   width: 100%;
   z-index: 9;
   .header_nav {
@@ -12,9 +10,12 @@
     justify-content: space-between;
     align-items: center; // 网站logo图
     #logo {
-      // height: 31px;
-      img {
-        width: 125px;
+      .logo_bg {
+        display: inline-block;
+        height: 24px;
+        width: 131px;
+        background:  url(../images/logo2.png) 0 0 no-repeat;
+        background-size: 100%;
       }
     }
     // 顶部导航
@@ -40,7 +41,6 @@
 
           }
         }
-
         // hover显示快
         .show_box {
           background-color: white;
@@ -94,29 +94,30 @@
           //显示盒子
           .show_box {
             display: none;
-            width: 98px;
+            width: 100px;
+            height: 150px;
             background-color: white;
             position: absolute;
             left: -39px;
-            top: 39px; // 三角形
+            top: 40px;
+            border-radius: 2px;
+            // 三角形
             .triangle {
-              width: 15px;
-              height: 15px;
+              width: 8px;
+              height: 8px;
               position: absolute;
-              top: -6px;
+              top: -4px;
               background-color: white;
-              left: 41px;
+              left: 45px;
               transform: rotate(45deg);
             }
             // 列表
             ul {
-              padding: 15px 0;
-              z-index: 1;
               li {
-                margin: 10px auto;
                 text-align: center;
                 a {
-                  font-size: 14px;
+                  font-size: 12px;
+                  line-height: 37px;
                   color: #515151;
                   display: block;
                 }
@@ -156,16 +157,21 @@
   }
   // hover显示的区域
   .header_hover {
-    height: 198px;
+    height: 0px;
+    overflow: hidden;
     display: none;
+    position: relative;
     .type_area {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -621px;
       display: flex;
       justify-content: space-between;
-      height: 100%;
+      height: 198px;
       align-items: center;
       a {
-        width: 142px; // padding: 20px 0;
-        // height: 140px;
+        width: 142px;
         display: block;
         img {
           display: block;
@@ -246,8 +252,6 @@
   // 版权
   .copyright {
     height: 104px;
-    // display: flex;
-    // align-items: center;
     box-sizing: border-box;
     .footer_nav {
       margin-top: 30px;

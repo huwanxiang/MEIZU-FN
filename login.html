@@ -15,7 +15,7 @@
     <!-- 引入人机验证 -->
     <script src="./js/verification.js"></script>
     <script src="//g.alicdn.com/sd/nvc/1.1.112/guide.js"></script>
-    <script>       
+    <script>
         window.onload = function(){
           var ic = new smartCaptcha({
             renderTo: '#sc',
@@ -60,10 +60,10 @@
                 </section>
                 <!-- 账号登录 -->
                 <form method="get" action="" autocomplete="off" onsubmit="return false" id="data_form">
-                    <input type="text" class="tel" name="tel" placeholder="请输入手机号">
-                    <p class=""> </p>
-                    <input type="password" name="password" class="password" placeholder="请输入密码">
-                    <p class=""> </p>
+                    <input type="text" class="tel" name="tel" placeholder="请输入手机号" value="15870624043">
+                    <p class="p"> </p>
+                    <input type="password" name="password" class="password" placeholder="请输入密码" value="123456">
+                    <p class="p"> </p>
                     <!-- 人机验证 -->
                     <div id="sc"></div>
                     <label class="checkbox inline">
@@ -84,8 +84,8 @@
     <footer id="footer"></footer>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/ajax0.0.1.js"></script>
+    <script src="./layer/layer.js"></script>
     <script>
-        
         // 引入公共底部
         $("#footer").load("footer.html");
         $(".login_mode a").click(function () {
@@ -144,9 +144,15 @@
                 if ($pAll[i].className != 'bg-success') {
                     $pAll[i].previousElementSibling.focus();
                     return;
+                } else {
+                    var $formData = $('#data_form').serialize();
+                    console.log($formData);
+                    $.ajax({
+                        
+                    })
                 }
             }
-            alert('全部验证成功');
+            // alert('全部验证成功');
         };
     </script>
 </body>
